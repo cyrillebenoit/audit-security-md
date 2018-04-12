@@ -5,7 +5,7 @@
 
 The ping command is executed directly on the server. This represents a vulnerability where users can browse files directly and cause damages to the system. For instance, we found this interesting file entering `; cat ../../CHANGELOG.md`.
 
-![image]()
+![ci.png](/images/ci.png)
 
 ### Attack story
 
@@ -60,9 +60,9 @@ A hacker changes the password of the victim on a shopping website and uses his a
 
 The files can be accessed directly if the user changes the parameters of the URL in his browser. This allows the user to access pages he shouldn't be able to.
 
-![image-ci-fi]()
+![fi-ci.png]()
 
-![image-fi]()
+![fi.png]()
 
 ### Attack story
 
@@ -76,18 +76,20 @@ A user accede to a hidden page (admin panel) on the website.
 
 ### Recommendation
 
- - Do 
+ - Verify user input
 
 ### Risk Analysis 2
 
 | Frequency | Effect |
 |----------:|-------:|
-|         2 |      4 |
+|         0 |      0 |
 
 ---
 ## IV- File Upload
 
 There is no restriction on the type of the file the user can upload. This can represent a risk for the company who owns the website if users decide to send compromised files and/or have them executed by the server.
+
+![fu]()
 
 ### Attack story
 
@@ -135,8 +137,8 @@ DROP DATABASE @name;#
 
 (better written) should be able to disrupt databases on the server. We've tried variations of that for hours without any success.
 
-![sqli-all]()
-![sqli-fail]()
+![sqli-all.png](/images/sqli-all.png)
+![sqli-fail.png](/images/sqli-fail.png)
 
 ### Attack story
 
@@ -164,6 +166,8 @@ A company steals the user databases from its competitors.
 
 This is similar to SQL Injection but even less frequent since the user cannot get any return from the DBMS.
 
+![sqli-blind.png](/images/sqli-blind.png)
+
 ### Attack story
 
 A company destroys the user databases from its competitors.
@@ -189,6 +193,9 @@ A company destroys the user databases from its competitors.
 ## VII- XSS (Reflected)
 
 This breach will allow hacker to alter the html file and have a javascript run in his own browser. He could then use social engineering to spread the link (such as `http://192.168.10.100/vulnerabilities/xss_r/?name=%3Cscript%3E++%09let+test+%3D+%22test%22%3B+%09while%281%29+%7B+%09alert%28test%29%3B+%7D+%3C%2Fscript%3E#`) to unaware users.
+
+![xss-r.png](/images/xss-r.png)
+![xss-r-code.png](/images/xss-r-code.png)
 
 ### Attack story
 
@@ -216,6 +223,9 @@ A spam mail asks a victim to pay its energy bill using an infected link of the v
 
 This is very critical because the hacker can have a script ran by any visitor of the infected website.
 
+![xss-s.png](/images/xss-s.png)
+![xss-s2.png](/images/xss-s2.png)
+
 ### Attack story
 
 A malicious user creates a script to use a visitor's processor to mine cryptocurrencies on a forum.
@@ -224,14 +234,14 @@ A malicious user creates a script to use a visitor's processor to mine cryptocur
 
 | Frequency | Effect |
 |----------:|-------:|
-|         4 |      5 |
+|         2 |      3 |
 
 ### Recommendation
 
-
+ - Escape script tags from user input before saving it in the server databases
 
 ### Risk Analysis 2
 
 | Frequency | Effect |
 |----------:|-------:|
-|         4 |      5 |
+|         0 |      0 |
