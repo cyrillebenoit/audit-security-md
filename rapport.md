@@ -1,6 +1,9 @@
 
 # Vulnerability Audit
 
+
+**Cyrille Benoit** & **Léo Dorbes**
+
 ## I- Command Injection
 
 The ping command is executed directly on the server. This represents a vulnerability where users can browse files directly and cause damages to the system. For instance, we found this interesting file entering `; cat ../../CHANGELOG.md`.
