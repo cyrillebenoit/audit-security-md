@@ -60,9 +60,9 @@ A hacker changes the password of the victim on a shopping website and uses his a
 
 The files can be accessed directly if the user changes the parameters of the URL in his browser. This allows the user to access pages he shouldn't be able to.
 
-![fi-ci.png]()
+![fi-ci.png](/images/fi-ci.png)
 
-![fi.png]()
+![fi.png](/images/fi-ci.png)
 
 ### Attack story
 
