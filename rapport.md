@@ -4,6 +4,7 @@
 
 **Cyrille Benoit** & **Léo Dorbes**
 
+
 ## I- Command Injection
 
 The ping command is executed directly on the server. This represents a vulnerability where users can browse files directly and cause damages to the system. For instance, we found this interesting file entering `; cat ../../CHANGELOG.md`.
@@ -91,8 +92,6 @@ A user accede to a hidden page (admin panel) on the website.
 ## IV- File Upload
 
 There is no restriction on the type of the file the user can upload. This can represent a risk for the company who owns the website if users decide to send compromised files and/or have them executed by the server.
-
-![fu]()
 
 ### Attack story
 
