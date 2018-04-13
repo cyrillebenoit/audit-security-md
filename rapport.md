@@ -39,6 +39,7 @@ A hacker destroys all files needed for the website directly on the server.
 |----------:|-------:|
 |         0 |      0 |
 
+[Back to top](#glossary)
 ---
 ## II- CSRF
 
@@ -66,6 +67,8 @@ A hacker changes the password of the victim on a shopping website and uses his a
 | Frequency | Effect |
 |----------:|-------:|
 |         1 |      0 |
+
+[Back to top](#glossary)
 
 ---
 ## III- File Inclusion
@@ -96,6 +99,8 @@ A user accede to a hidden page (admin panel) on the website.
 |----------:|-------:|
 |         0 |      0 |
 
+[Back to top](#glossary)
+
 ---
 ## IV- File Upload
 
@@ -123,6 +128,8 @@ A group of malicious users distributes a virus in a fake PDF file on a forum.
 | Frequency | Effect |
 |----------:|-------:|
 |         2 |      0 |
+
+[Back to top](#glossary)
 
 ---
 ## V- SQL Injection
@@ -171,6 +178,8 @@ A company steals the user databases from its competitors.
 |----------:|-------:|
 |         0 |      0 |
 
+[Back to top](#glossary)
+
 ---
 ## VI- SQL Injection (Blind)
 
@@ -198,6 +207,8 @@ A company destroys the user databases from its competitors.
 | Frequency | Effect |
 |----------:|-------:|
 |         0 |      0 |
+
+[Back to top](#glossary)
 
 ---
 ## VII- XSS (Reflected)
@@ -227,6 +238,8 @@ A spam mail asks a victim to pay its energy bill using an infected link of the v
 | Frequency | Effect |
 |----------:|-------:|
 |         0 |      0 |
+
+[Back to top](#glossary)
 
 ---
 ## VIII- XSS (Stored)
