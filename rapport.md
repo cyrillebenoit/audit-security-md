@@ -77,7 +77,7 @@ The files can be accessed directly if the user changes the parameters of the URL
 
 ![fi-ci.png](/images/fi-ci.png)
 
-![fi.png](/images/fi-ci.png)
+![fi.png](/images/fi.png)
 
 ### Attack story
 
