@@ -1,9 +1,17 @@
-
 # Vulnerability Audit
-
 
 **Cyrille Benoit** & **Léo Dorbes**
 
+## Glossary
+
+ - [I- Command Injection](#i--command-injection)
+ - [II- CSRF](#ii--csrf)
+ - [III- File Inclusion](#iii--file-inclusion)
+ - [IV- File Upload](#iv--file-upload)
+ - [V- SQL Injection](#v--sql-injection)
+ - [VI- SQL Injection (Blind)](#vi--sql-injection-blind)
+ - [VII- XSS (Reflected)](#vii--xss-reflected)
+ - [VIII- XSS (Stored)](#viii--xss-stored)
 
 ## I- Command Injection
 
@@ -34,7 +42,7 @@ A hacker destroys all files needed for the website directly on the server.
 ---
 ## II- CSRF
 
-The admin password can be changed from another website calling the route 
+The admin password can be changed from another website calling the route
 `http://192.168.10.100/vulnerabilities/csrf/?password_new=PASS&password_conf=PASS&Change=Change#` in the background (using javascript for instance)
 
 This will rely on the current session used by the user and he won't notice anything before trying logging back again.
@@ -122,14 +130,14 @@ A group of malicious users distributes a virus in a fake PDF file on a forum.
 The injection seems pretty limited there, the hacker cannot fetch the names of the tables used by the SQL user.
 
  - `1' || true;#` - This will return all elements from the table.
- - `1'; SHOW TABLES;#` - The result is not shown in the webpage, but a command like 
- 
+ - `1'; SHOW TABLES;#` - The result is not shown in the webpage, but a command like
+
 ```mysql
 1';
 DROP DATABASE (SELECT DATABASE());#
 ```
 
-or 
+or
 ```mysql
 1';
 SET @name = (SELECT DATABASE());
